@@ -1,0 +1,101 @@
+.wcss--description {
+  font-style: italic;
+  display: block;
+}
+
+.wcss--progressbar {
+  display: block;
+  width: 100%;
+  background: #d3d7d3;
+  height: 8px;
+  border-radius: 5px;
+}
+
+.wcss--progressbar .filled {
+  background: green;
+  height: 8px;
+  border-radius: 5px;
+}
+
+.pepro_wc_delivery_stages.estimated_delivery_status.bars,
+.pepro_wc_delivery_stages.estimated_delivery_status.images,
+.pepro_wc_delivery_stages.estimated_delivery_status.progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estimated_delivery_status .estimated_delivery_date_label {
+  width: 35%;
+  min-width: 35%;
+}
+
+.wcss--progressbar.show--exrta::before {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  margin-top: -1.6rem;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.pepro_wc_delivery_stages.estimated_delivery_status.bars > .show--exrta {
+  position: absolute;
+  width: 100%;
+}
+
+.pepro_wc_delivery_stages.estimated_delivery_status.bars > .show--exrta::before {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  margin-top: -1.85rem;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.wcss--progressbar.show--exrta {
+  margin-top: 1rem;
+}
+
+.pepro_wc_delivery_stages.estimated_delivery_status.bars > div {
+  -webkit-margin-end: 4px;
+  margin-inline-end: 4px;
+}
+
+.wcss--progress-img img {
+  height: calc(48px + .5rem);
+  width: calc(48px + .5rem);
+  padding: 0.4rem;
+  background: #dadfda;
+  box-shadow: 0 0 4px 1px #abacab;
+}
+
+.wcss--progress-img img.filled {
+  box-shadow: 0 0 4px 1px #1f911f;
+  border-radius: 4px;
+  background: #afa;
+}
+
+.pepro_wc_delivery_stages.estimated_delivery_status.images {
+  justify-content: flex-start;
+}
+
+.wcss--progress-img {
+  -webkit-margin-end: 1rem;
+  margin-inline-end: 1rem;
+}
+
+.pepro_wc_delivery_stages.estimated_delivery_status.images {
+  align-items: baseline;
+}
+
+.estimated_delivery_status.images .estimated_delivery_date_label {
+  width: auto;
+  min-width: auto;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.pepro_wc_delivery_stages.estimated_delivery_status.bars.show--exrta {
+  margin-top: 2rem;
+}

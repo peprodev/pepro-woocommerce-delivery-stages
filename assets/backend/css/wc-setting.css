@@ -1,0 +1,78 @@
+@font-face {
+    font-family: peprofont;
+    font-style: normal;
+    font-weight: bold;
+    src: url('96594ad4.woff2') format('woff2');
+}
+
+[dir=rtl] #wc-backbone-modal-dialog,
+[dir=rtl] #wc-backbone-modal-dialog h1,
+[dir=rtl] .jconfirm-box,
+[dir=rtl] #wpfooter,
+[dir=rtl] form#mainform h2,
+[dir=rtl] form#mainform{
+  font-family: iranyekan, roboto, Arial !important;
+  direction: rtl;
+}
+
+.woocommerce-input-toggle {
+  border: 2px solid #f57236;
+  background-color: #f57236;
+}
+
+table.wc-shipping-stages td.wc-shipping-zone-method-blank-state {
+  background: #f4e7e0 !important;
+}
+
+table.wc-shipping-stages td.wc-shipping-zone-method-blank-state p {
+  color: #f4824e;
+}
+
+table.wc-shipping-stages td.wc-shipping-zone-method-blank-state::before {
+  color: #fbc5ad;
+}
+
+table.wc-shipping-stages .wc-shipping-zone-method-description img {
+  height: 24px;
+  float: inline-start;
+  -webkit-margin-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.img--x {
+  line-height: 1 !important;
+  margin-top: 0.5rem;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+table.wc-shipping-stages td.wc-shipping-zone-method-blank-state::before {
+	content: "\E01a";
+	font-size: 5rem;
+	top: 1.5rem;
+	right: 1rem;
+	margin-top: -1rem;
+	left: auto;
+}
+
+[dir=rtl] table.wc-shipping-stages td.wc-shipping-zone-method-blank-state::before {
+	content: "\E01a";
+	font-size: 5rem;
+	top: 1.5rem;
+	left: 1rem;
+	margin-top: -1rem;
+	right: auto;
+}
+
+.jconfirm.jconfirm-modern .jconfirm-box div.jconfirm-content {
+	line-height: 2.5;
+}
+
+
+code {
+	display: block !important;
+  border-radius: 5px;
+  padding: .5rem;
+  margin: .5rem 0;
+}
