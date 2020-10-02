@@ -97,27 +97,16 @@ if (!class_exists("WCcustomShippingStages")) {
             // Estimated Delivery Date
             add_filter("plugin_action_links_{$this->plugin_basename}", array($this, 'plugins_row_links'));
             add_action("plugin_row_meta", array( $this, 'plugin_row_meta' ), 10, 2);
-            add_action("admin_menu", array($this, 'admin_menu'));
+            add_action("admin_menu", array($this, 'admin_menu'),1000);
             add_action("admin_init", array($this, 'admin_init'));
             add_action("wp_ajax_nopriv_{$this->td}", array($this, 'handel_ajax_req'));
             add_action("wp_ajax_{$this->td}", array($this, 'handel_ajax_req'));
             add_action("admin_enqueue_scripts", array($this, 'admin_enqueue_scripts'));
-            add_action('save_post', array( $this, 'wc_save_shop_order_metabox' ) );
-            add_action( "woocommerce_order_details_before_order_table", array( $this, 'wc_order_details_before_order_table' ));
+            add_action("save_post", array( $this, 'wc_save_shop_order_metabox' ) );
+            add_action("woocommerce_order_details_before_order_table", array( $this, 'wc_order_details_before_order_table' ));
             include_once $this->plugin_dir . "include/class-setting.php";
-            add_filter( "woocommerce_admin_order_data_after_order_details", array($this, 'wc_order_data_after_order_details') );
+            add_filter("woocommerce_admin_order_data_after_order_details", array($this, 'wc_order_data_after_order_details') );
 
-            add_action( "pepro-wc-delivery-status-changed", function($order_id, $prev_data, $new_data){
-              $text = sprintf(
-                "ORDER ID %s Status changed from '%s' <ID %s> to '%s' <ID %s>",
-                $order_id,
-                $prev_data,
-                $this->get_delivery_status($prev_data)["title"],
-                $new_data,
-                $this->get_delivery_status($new_data)["title"],
-              );
-              error_log($text);
-            },10,3);
         }
         /**
          * Wc Order Details Before Order Table Description
@@ -583,7 +572,8 @@ if (!class_exists("WCcustomShippingStages")) {
            filter: opacity(0.0); transition: all 0.3s ease-in-out; }#footer-left b a:hover::before { -webkit-filter: opacity(1.0); filter: opacity(1.0); transition: all 0.3s ease-in-out; }[dir=rtl] #footer-left b a::before {margin-inline-start: calc(30px);}");
            wp_enqueue_style($f);
            add_filter( 'admin_footer_text', function () { return sprintf(_x("Thanks for using %s products", "footer-copyright", $this->td), "<b><a href='https://pepro.dev/' target='_blank' >".__("Pepro Dev", $this->td)."</a></b>");}, 11000 );
-           add_filter( 'update_footer', function () { return sprintf(_x("%s — Version %s", "footer-copyright", $this->td), $this->title, $this->version); }, 1100 ); }
+           add_filter( 'update_footer', function () { return sprintf(_x("%s — Version %s", "footer-copyright", $this->td), $this->title, $this->version); }, 1100 );
+         }
         /**
          * Add Admin Menu
          *
