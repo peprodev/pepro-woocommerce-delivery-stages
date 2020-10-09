@@ -8,12 +8,14 @@ Author: Pepro Dev. Group
 Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
-Plugin URI: https://pepro.dev/
+Plugin URI: https://pepro.dev/wc-delivery-stages
 Version: 1.0.0
 Stable tag: 1.0.0
 Requires at least: 5.0
 Tested up to: 5.5
 Requires PHP: 5.6
+WC requires at least: 4.0
+WC tested up to: 4.2.0
 Text Domain: ppwcss
 Domain Path: /languages
 Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
