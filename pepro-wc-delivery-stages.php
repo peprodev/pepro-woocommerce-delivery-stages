@@ -23,8 +23,8 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 defined("ABSPATH") or die("Pepro WC Delivery Stages :: Unauthorized Access!");
-if (!class_exists("WCcustomShippingStages")) {
-    class WCcustomShippingStages
+if (!class_exists("peproWoocommerceShippingStages")) {
+    class peproWoocommerceShippingStages
     {
         private static $_instance = null;
         public $td;
@@ -375,7 +375,11 @@ if (!class_exists("WCcustomShippingStages")) {
               switch ($_POST["lparam"]) {
                 case 'savesettings':
                   if (isset($_POST["dparam"]) && !empty($_POST["dparam"])){
-                    update_option("{$this->db_slug}-data", $_POST["dparam"]);
+                    $data = array();
+                    foreach ($_POST['dparam'] as $key => $value) {
+                      $data[sanitize_text_field( $key )] = sanitize_textarea_field( $value );
+                    }
+                    update_option("{$this->db_slug}-data", $data);
                   }else{
                     update_option("{$this->db_slug}-data", "");
                   }
@@ -412,8 +416,8 @@ if (!class_exists("WCcustomShippingStages")) {
             include_once ABSPATH . 'wp-admin/includes/plugin.php';
             deactivate_plugins(plugin_basename(__FILE__));
           }
-          $WCcustomShippingStages_class_options = $this->get_setting_options();
-          foreach ($WCcustomShippingStages_class_options as $sections) {
+          $peproWoocommerceShippingStages_class_options = $this->get_setting_options();
+          foreach ($peproWoocommerceShippingStages_class_options as $sections) {
             foreach ($sections["data"] as $id=>$def) {
               add_option($id, $def);
               register_setting($sections["name"], $id);
@@ -546,10 +550,10 @@ if (!class_exists("WCcustomShippingStages")) {
          */
         public static function uninstall_hook()
         {
-            $ppa = new WCcustomShippingStages;
+            $ppa = new peproWoocommerceShippingStages;
             if (get_option("{$ppa->db_slug}-clearunistall", "no") === "yes") {
-                $WCcustomShippingStages_class_options = $ppa->get_setting_options();
-                foreach ($WCcustomShippingStages_class_options as $options) {
+                $peproWoocommerceShippingStages_class_options = $ppa->get_setting_options();
+                foreach ($peproWoocommerceShippingStages_class_options as $options) {
                     $opparent = $options["name"];
                     foreach ($options["data"] as $optname => $optvalue) {
                         unregister_setting($opparent, $optname);
@@ -798,10 +802,10 @@ if (!class_exists("WCcustomShippingStages")) {
         "plugins_loaded", function () {
             global $WCCSS;
             load_plugin_textdomain("ppwcss", false, dirname(plugin_basename(__FILE__))."/languages/");
-            $WCCSS = new WCcustomShippingStages;
-            register_activation_hook(__FILE__, array("WCcustomShippingStages", "activation_hook"));
-            register_deactivation_hook(__FILE__, array("WCcustomShippingStages", "deactivation_hook"));
-            register_uninstall_hook(__FILE__, array("WCcustomShippingStages", "uninstall_hook"));
+            $WCCSS = new peproWoocommerceShippingStages;
+            register_activation_hook(__FILE__, array("peproWoocommerceShippingStages", "activation_hook"));
+            register_deactivation_hook(__FILE__, array("peproWoocommerceShippingStages", "deactivation_hook"));
+            register_uninstall_hook(__FILE__, array("peproWoocommerceShippingStages", "uninstall_hook"));
         }
     );
 }
