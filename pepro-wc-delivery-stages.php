@@ -9,8 +9,8 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/wc-delivery-stages
-Version: 1.0.0
-Stable tag: 1.0.0
+Version: 1.0.0.1
+Stable tag: 1.0.0.1
 Requires at least: 5.0
 Tested up to: 5.5
 Requires PHP: 5.6
