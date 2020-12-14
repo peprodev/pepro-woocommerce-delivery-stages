@@ -1,12 +1,3 @@
-@Author: Amirhosseinhpv
-@Date:   2020/10/07 22:17:10
-@Email:  its@hpv.im
-@Last modified by:   Amirhosseinhpv
-@Last modified time: 2020/12/14 04:23:26
-@License: GPLv2
-@Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
-
-
 === Pepro Delivery Stages for WooCommerce ===
 Contributors: peprodev,amirhosseinhpv
 Donate link: https://pepro.dev/donate
