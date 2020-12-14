@@ -9,19 +9,24 @@ Developer: Amirhosseinhpv
 Author URI: https://pepro.dev/
 Developer URI: https://hpv.im/
 Plugin URI: https://pepro.dev/wc-delivery-stages
-Version: 1.0.0.1
-Stable tag: 1.0.0.1
+Version: 1.1.0
+Stable tag: 1.1.0
 Requires at least: 5.0
-Tested up to: 5.5
+Tested up to: 5.6
 Requires PHP: 5.6
 WC requires at least: 4.0
-WC tested up to: 4.2.0
-Text Domain: ppwcss
+WC tested up to: 4.8.0
+Text Domain: pepro-delivery-stages-for-woocommerce
 Domain Path: /languages
 Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
+# @Date:   2020/08/26 08:49:33
+# @Email:  its@hpv.im
+# @Last modified by:   Amirhosseinhpv
+# @Last modified time: 2020/12/14 04:21:59
+
 defined("ABSPATH") or die("Pepro WC Delivery Stages :: Unauthorized Access!");
 if (!class_exists("peproWoocommerceShippingStages")) {
     class peproWoocommerceShippingStages
@@ -55,9 +60,9 @@ if (!class_exists("peproWoocommerceShippingStages")) {
         public function __construct()
         {
             global $wpdb;
-            $this->td = "ppwcss";
+            $this->td = "pepro-delivery-stages-for-woocommerce";
             self::$_instance = $this;
-            $this->db_slug = $this->td;
+            $this->db_slug = "ppwcss";
             $this->db_table = $wpdb->prefix . $this->db_slug;
             $this->plugin_dir = plugin_dir_path(__FILE__);
             $this->plugin_url = plugins_url("", __FILE__);
@@ -101,8 +106,8 @@ if (!class_exists("peproWoocommerceShippingStages")) {
             add_action("plugin_row_meta", array( $this, 'plugin_row_meta' ), 10, 2);
             add_action("admin_menu", array($this, 'admin_menu'),1000);
             add_action("admin_init", array($this, 'admin_init'));
-            add_action("wp_ajax_nopriv_{$this->td}", array($this, 'handel_ajax_req'));
-            add_action("wp_ajax_{$this->td}", array($this, 'handel_ajax_req'));
+            add_action("wp_ajax_nopriv_{$this->db_slug}", array($this, 'handel_ajax_req'));
+            add_action("wp_ajax_{$this->db_slug}", array($this, 'handel_ajax_req'));
             add_action("admin_enqueue_scripts", array($this, 'admin_enqueue_scripts'));
             add_action("save_post", array( $this, 'wc_save_shop_order_metabox' ) );
             add_action("woocommerce_order_details_before_order_table", array( $this, 'wc_order_details_before_order_table' ));
@@ -137,7 +142,8 @@ if (!class_exists("peproWoocommerceShippingStages")) {
           if (get_option( "wccs_stages_esdd" ) == "yes" && !empty(trim($estimated_date))){
             echo sprintf(
               "<p class='pepro_wc_delivery_stages estimated_delivery_date'>%s<span>%s</span></p>",
-              $showlabel?"<strong class='estimated_delivery_date_label'>".$caption__estimated_delivery_date."</strong>":"",
+              ($showlabel?"<strong class='estimated_delivery_date_label'>".
+              $caption__estimated_delivery_date."</strong>":""),
               $estimated_date);
           }
 
@@ -150,7 +156,7 @@ if (!class_exists("peproWoocommerceShippingStages")) {
 
           wp_enqueue_style( "pepro-wc-delivery-stages", $this->assets_url . "frontend/css/pepro-wc-delivery-stages.css");
 
-          $stages = get_option("{$this->td}-data", $this->get_default_delivery_stages());
+          $stages = get_option("{$this->db_slug}-data", $this->get_default_delivery_stages());
           if (empty($stages) || !is_array($stages)){ $stages = $this->get_default_delivery_stages(); }
           if (!empty($current_state)){
             foreach ($stages as $key => $value) {
@@ -176,7 +182,7 @@ if (!class_exists("peproWoocommerceShippingStages")) {
               case 'plaintext':
                 $html_output = sprintf(
                   "<p class='pepro_wc_delivery_stages estimated_delivery_status plaintext'>%s<span class='wcss--title'>%s</span></p>",
-                  $showlabel?"<strong class='estimated_delivery_date_label'>".$caption__current_delivery_state."</strong>":"",
+                  ($showlabel?"<strong class='estimated_delivery_date_label'>".$caption__current_delivery_state."</strong>":""),
                   $foundedStageTitle
                 );
                 break;
@@ -186,19 +192,20 @@ if (!class_exists("peproWoocommerceShippingStages")) {
                 <span class='wcss--title'>%s</span>
                 <span class='wcss--description'>%s</span>
                 </p>",
-                $showlabel?"<strong class='estimated_delivery_date_label'>".$caption__current_delivery_state."</strong>":"",
+                ($showlabel?"<strong class='estimated_delivery_date_label'>".$caption__current_delivery_state."</strong>":""),
                 $foundedStageTitle,
                 $foundedStageDesc);
                 break;
 
               case 'progress':
-                $html_output = sprintf("<div class='pepro_wc_delivery_stages estimated_delivery_status progress'>%s
-                <div class='wcss--progressbar %s' title='%s'><div class='filled' style='width: %s%%;'></div></div>
+                $html_output = sprintf(
+                "<div class='pepro_wc_delivery_stages estimated_delivery_status progress'>%s
+                  <div class='wcss--progressbar %s' title='%s'><div class='filled' style='width: %s%%;'></div></div>
                 </div>",
-                $showlabel?"<strong class='estimated_delivery_date_label'>".$caption__current_delivery_state."</strong>":"",
-                $showlabel?"":"show--exrta",
+                ($showlabel?"<strong class='estimated_delivery_date_label'>".$caption__current_delivery_state."</strong>":""),
+                ($showlabel?"":"show--exrta"),
                 esc_attr( $foundedStageTitle ),
-                round(100/$all_stages*$cur_stages),
+                round( 100 / $all_stages * $cur_stages )
                 );
                 break;
 
@@ -259,11 +266,11 @@ if (!class_exists("peproWoocommerceShippingStages")) {
          */
         public function wc_order_data_after_order_details($order)
         {
-          wp_nonce_field('security_nonce',"{$this->td}_nonce");
+          wp_nonce_field('security_nonce',"{$this->db_slug}_nonce");
           $estimated_date = get_post_meta( $order->get_id(), "estimated_delivery_date", true);
           $current_state = get_post_meta( $order->get_id(), "current_delivery_state", true);
           $options = "";
-          $stages = get_option("{$this->td}-data", $this->get_default_delivery_stages());
+          $stages = get_option("{$this->db_slug}-data", $this->get_default_delivery_stages());
 
           if (empty($stages) || !is_array($stages)){
             $stages = $this->get_default_delivery_stages();
@@ -301,7 +308,7 @@ if (!class_exists("peproWoocommerceShippingStages")) {
          */
         public function get_delivery_status($id=0)
         {
-          $stages = get_option("{$this->td}-data", $this->get_default_delivery_stages());
+          $stages = get_option("{$this->db_slug}-data", $this->get_default_delivery_stages());
           if (empty($stages) || !is_array($stages)){ $stages = $this->get_default_delivery_stages(); }
           foreach ($stages as $key => $value) {
             if ("yes" == $value["enabled"]){
@@ -325,8 +332,8 @@ if (!class_exists("peproWoocommerceShippingStages")) {
         public function wc_save_shop_order_metabox($post_id)
         {
             if (
-              !isset( $_POST["{$this->td}_nonce"] ) ||
-              !wp_verify_nonce( $_POST["{$this->td}_nonce"], 'security_nonce' ) ||
+              !isset( $_POST["{$this->db_slug}_nonce"] ) ||
+              !wp_verify_nonce( $_POST["{$this->db_slug}_nonce"], 'security_nonce' ) ||
               !current_user_can( 'edit_post', $post_id ) ||
               ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE )
             ){
@@ -367,11 +374,11 @@ if (!class_exists("peproWoocommerceShippingStages")) {
          */
         public function handel_ajax_req()
         {
-          check_ajax_referer( 'ppwcss', 'nonce' );
-          if ( wp_doing_ajax() && $_POST['action'] == $this->td ) {
-            do_action( "ppwcss__handle_ajaxrequests", $_POST);
+          check_ajax_referer( $this->db_slug, 'nonce' );
+          if ( wp_doing_ajax() && $_POST['action'] == $this->db_slug ) {
+            do_action( "{$this->db_slug}__handle_ajaxrequests", $_POST);
 
-            if ($_POST["wparam"] === "ppwcss"){
+            if ($_POST["wparam"] === "$this->db_slug"){
               switch ($_POST["lparam"]) {
                 case 'savesettings':
                   if (isset($_POST["dparam"]) && !empty($_POST["dparam"])){
@@ -609,10 +616,10 @@ if (!class_exists("peproWoocommerceShippingStages")) {
           $currentTime      = date_i18n( get_option('time_format'),$currentTimestamp);
 
           return array(
-            "td"                  => "{$this->td}",
+            "td"                  => "{$this->db_slug}",
             "ajax"                => admin_url("admin-ajax.php"),
             "home"                => home_url(),
-            "nonce"               => wp_create_nonce($this->td),
+            "nonce"               => wp_create_nonce($this->db_slug),
             "title"               => _x("Select image file", "wc-setting-js", $this->td),
             "btntext"             => _x("Use this image", "wc-setting-js", $this->td),
             "clear"               => _x("Clear", "wc-setting-js", $this->td),
@@ -636,12 +643,12 @@ if (!class_exists("peproWoocommerceShippingStages")) {
             "clearDBConfirmation" => _x("Are you sure you want to clear all data from database? This cannot be undone.", "wc-setting-js", $this->td),
             "clearDBConfirmatio2" => _x("Are you sure you want to clear all Current Contact form data from database? This cannot be undone.", "wc-setting-js", $this->td),
             "clearDBConfTitle"    => _x("Clear Database", "wc-setting-js", $this->td),
-            "str1"                => sprintf(_x("Product Size Suggestion AI Data Exported via %s", "wc-setting-js", $this->td),"$this->title_w"),
-            "str2"                => sprintf(_x("Product Size Suggestion AI Export", "wc-setting-js", $this->td),$this->title_w),
+            "str1"                => sprintf(_x("Product WC Delivery Stages Data Exported via %s", "wc-setting-js", $this->td),"$this->title_w"),
+            "str2"                => sprintf(_x("Product WC Delivery Stages Export", "wc-setting-js", $this->td),$this->title_w),
             "str3"                => sprintf(_x("Exported at %s @ %s", "wc-setting-js", $this->td),$currentDate,$currentTime),
-            "str4"                => "Product Size Suggestion AI export-". date_i18n("YmdHis",current_time( "timestamp")),
+            "str4"                => "Product WC Delivery Stages export-". date_i18n("YmdHis",current_time( "timestamp")),
             "str5"                => sprintf(_x("Exported via %s — Export Date: %s @ %s — Developed by Pepro Dev. Group ( https://pepro.dev/ )", "wc-setting-js", $this->td),$this->title_w,$currentDate,$currentTime),
-            "str6"                => "Product Size Suggestion AI",
+            "str6"                => "Product WC Delivery Stages",
             "tbl1"                => _x("No data available in table", "data-table", $this->td),
             "tbl2"                => _x("Showing _START_ to _END_ of _TOTAL_ entries", "data-table", $this->td),
             "tbl3"                => _x("Showing 0 to 0 of 0 entries", "data-table", $this->td),
@@ -679,7 +686,7 @@ if (!class_exists("peproWoocommerceShippingStages")) {
         public function admin_enqueue_scripts($hook)
         {
             /* style to be enqueued on all wordpress backend pages */
-            wp_enqueue_style(   "ppwcsswpbk", "{$this->assets_url}backend/css/backend-wp.css", array(), current_time( "timestamp" ));
+            wp_enqueue_style(   "{$this->db_slug}wpbk", "{$this->assets_url}backend/css/backend-wp.css", array(), current_time( "timestamp" ));
         }
         /**
          * check if woocommerce is activated
@@ -801,7 +808,7 @@ if (!class_exists("peproWoocommerceShippingStages")) {
     add_action(
         "plugins_loaded", function () {
             global $WCCSS;
-            load_plugin_textdomain("ppwcss", false, dirname(plugin_basename(__FILE__))."/languages/");
+            load_plugin_textdomain("pepro-delivery-stages-for-woocommerce", false, dirname(plugin_basename(__FILE__))."/languages/");
             $WCCSS = new peproWoocommerceShippingStages;
             register_activation_hook(__FILE__, array("peproWoocommerceShippingStages", "activation_hook"));
             register_deactivation_hook(__FILE__, array("peproWoocommerceShippingStages", "deactivation_hook"));
@@ -809,6 +816,6 @@ if (!class_exists("peproWoocommerceShippingStages")) {
         }
     );
 }
-/*################################################################################
+/*##################################################
 Lead Developer: [amirhosseinhpv](https://hpv.im/)
-################################################################################*/
+##################################################*/

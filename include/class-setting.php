@@ -1,4 +1,13 @@
 <?php
+# @Author: Amirhosseinhpv
+# @Date:   2020/08/29 12:54:59
+# @Email:  its@hpv.im
+# @Last modified by:   Amirhosseinhpv
+# @Last modified time: 2020/12/14 04:17:55
+# @License: GPLv2
+# @Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
+
+
 defined("ABSPATH") or die("Pepro WC Delivery Stages :: Unauthorized Access!");
 add_filter("woocommerce_get_settings_pages", "wccs__wc_get_settings_pages");
 /**
@@ -23,9 +32,10 @@ function wccs__wc_get_settings_pages()
       public function __construct()
       {
         global $WCCSS;
-        $this->td     = "ppwcss";
-        $this->id     = "wc_shipping_stages";
-        $this->label  = _x("Delivery Stages", "wc-setting", $this->td);
+        $this->td       = "pepro-delivery-stages-for-woocommerce";
+        $this->db_slug  = "ppwcss";
+        $this->id       = "wc_shipping_stages";
+        $this->label    = _x("Delivery Stages", "wc-setting", $this->td);
         add_action("woocommerce_settings_{$this->id}",       array( $this, 'output' ));
         add_action("woocommerce_settings_save_{$this->id}",  array( $this, 'save' ));
         add_action("woocommerce_sections_{$this->id}",       array( $this, 'output_sections' ));
@@ -56,8 +66,8 @@ function wccs__wc_get_settings_pages()
         wp_enqueue_style("wc_shipingstages_setting", plugins_url("/assets/backend/css/wc-setting.css", dirname(__FILE__)) );
         wp_register_script("wc_shipingstages_setting", plugins_url("/assets/backend/js/backend-core.js", dirname(__FILE__)), array("jquery","wp-color-picker"));
         wp_localize_script("wc_shipingstages_setting", "_l10n", array(
-            "td"=> $this->td,
-            "json_data"=> get_option("{$this->td}-data"),
+            "td"=> $this->db_slug,
+            "json_data"=> get_option("{$this->db_slug}-data"),
             "json_data_default"=> $WCCSS->get_default_delivery_stages(),
             "ajaxurl"=> admin_url( "admin-ajax.php" ),
             "url"=> plugins_url("/assets/backend/", dirname(__FILE__)),
@@ -274,7 +284,7 @@ function wccs__wc_get_settings_pages()
         </table>
         <?php do_action( 'woocommerce_shipping_stages_after_table' ); ?>
         <p class="submit">
-        	<button type="submit" name="submit" integrity="<?=wp_create_nonce('ppwcss')?>" id="submit" class="button button-primary button-large wc-shipping-zone-method-save" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>" ><?php esc_html_e( 'Save changes', 'woocommerce' ); ?></button></p>
+        	<button type="submit" name="submit" integrity="<?=wp_create_nonce($this->db_slug)?>" id="submit" class="button button-primary button-large wc-shipping-zone-method-save" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>" ><?php esc_html_e( 'Save changes', 'woocommerce' ); ?></button></p>
         <script type="text/html" id="tmpl-wc-shipping-zone-method-row-blank">
           <tr class="shipping-stage--blank">
             <td class="wc-shipping-zone-method-blank-state" colspan="4">

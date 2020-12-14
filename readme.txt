@@ -1,13 +1,22 @@
+@Author: Amirhosseinhpv
+@Date:   2020/10/07 22:17:10
+@Email:  its@hpv.im
+@Last modified by:   Amirhosseinhpv
+@Last modified time: 2020/12/14 04:23:26
+@License: GPLv2
+@Copyright: Copyright © 2020 Amirhosseinhpv, All rights reserved.
+
+
 === Pepro Delivery Stages for WooCommerce ===
 Contributors: peprodev,amirhosseinhpv
 Donate link: https://pepro.dev/donate
 Tags: functionality,woocommmerce,shipping,delivery,tracking,order tracking,shipping tracking,delivery tracking,delivery status
 Requires at least: 5.0
-Tested up to: 5.5.1
-Stable tag: 1.0.0.1
+Tested up to: 5.6
+Stable tag: 1.1.0
 Requires PHP: 5.6
 WC requires at least: 4.0
-WC tested up to: 4.2.0
+WC tested up to: 4.8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +84,13 @@ You can help us improve our works by committing/requesting your changes to Pepro
 
 == Changelog ==
 
+= 1.1 =
+
+- WP 5.6 Compatible
+- PHP 7.4.* Compatible
+- Fixed some errors
+- Changed text-domain
+
 = 1.0 =
 
 - Initial release
@@ -84,6 +100,13 @@ You can help us improve our works by committing/requesting your changes to Pepro
 ***PEPRO DEV*** is a premium supplier of quality WordPress plugins, services and support. Join us at [https://pepro.dev/](https://pepro.dev/) and also don't forget to check our [free plugins](http://profiles.wordpress.org/peprodev/), we hope you enjoy them!
 
 == Upgrade Notice ==
+
+= 1.1 =
+
+- WP 5.6 Compatible
+- PHP 7.4.* Compatible
+- Fixed some errors
+- Changed text-domain
 
 = 1.0 =
 

@@ -1,0 +1,697 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"Project-Id-Version: Pepro Delivery Stages for WooCommerce\n"
+"POT-Creation-Date: 2020-12-14 04:24+0330\n"
+"PO-Revision-Date: 2020-12-14 04:25+0330\n"
+"Language-Team: Amirhosseinhpv <amirhossein@hpv.im>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: pepro-wc-delivery-stages.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: Amirhosseinhpv <amirhossein@hpv.im>\n"
+"Language: fa_IR\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: include/class-setting.php:38 include/class-setting.php:47
+msgctxt "wc-setting"
+msgid "Delivery Stages"
+msgstr "مراحل تحویل"
+
+#: include/class-setting.php:48
+msgctxt "wc-setting"
+msgid "Design"
+msgstr "طراحی"
+
+#: include/class-setting.php:49
+msgctxt "wc-setting"
+msgid "Internationalization"
+msgstr "ترجمه پذیری"
+
+#: include/class-setting.php:50 include/class-setting.php:185
+msgctxt "wc-setting"
+msgid "Documentations"
+msgstr "مستندات"
+
+#: include/class-setting.php:74 pepro-wc-delivery-stages.php:623
+msgctxt "wc-setting-js"
+msgid "Select image file"
+msgstr "انتخاب فایل عکس"
+
+#: include/class-setting.php:75 pepro-wc-delivery-stages.php:624
+msgctxt "wc-setting-js"
+msgid "Use this image"
+msgstr "استفاده از این عکس"
+
+#: include/class-setting.php:76 pepro-wc-delivery-stages.php:625
+msgctxt "wc-setting-js"
+msgid "Clear"
+msgstr "پاک کردن"
+
+#: include/class-setting.php:77
+msgctxt "wc-setting-js"
+msgid "Ok"
+msgstr "باشه"
+
+#: include/class-setting.php:78 pepro-wc-delivery-stages.php:636
+msgctxt "wc-setting-js"
+msgid "Yes"
+msgstr "بلی"
+
+#: include/class-setting.php:79 pepro-wc-delivery-stages.php:637
+msgctxt "wc-setting-js"
+msgid "No"
+msgstr "خیر"
+
+#: include/class-setting.php:80 pepro-wc-delivery-stages.php:640
+msgctxt "wc-setting-js"
+msgid "Close"
+msgstr "نزدیک"
+
+#: include/class-setting.php:81 pepro-wc-delivery-stages.php:630
+msgctxt "wc-setting-js"
+msgid "Error"
+msgstr "خطا!"
+
+#: include/class-setting.php:82
+msgctxt "wc-setting-js"
+msgid "Successfully Done"
+msgstr "عملیات موفق"
+
+#: include/class-setting.php:83 pepro-wc-delivery-stages.php:638
+msgctxt "wc-setting-js"
+msgid "Cancel"
+msgstr "لغو"
+
+#: include/class-setting.php:84
+msgctxt "wc-setting-js"
+msgid "Sample Name"
+msgstr "نام آزمایشی"
+
+#: include/class-setting.php:85
+msgctxt "wc-setting-js"
+msgid "Sample Description"
+msgstr "توضیحات آزمایشی"
+
+#: include/class-setting.php:86 pepro-wc-delivery-stages.php:626
+msgctxt "wc-setting-js"
+msgid "Current preview"
+msgstr "پیش نمایش فعلی"
+
+#: include/class-setting.php:87 pepro-wc-delivery-stages.php:627
+msgctxt "wc-setting-js"
+msgid "Select image"
+msgstr "انتخاب عکس"
+
+#: include/class-setting.php:88
+msgid "Yes"
+msgstr "بلی"
+
+#: include/class-setting.php:89
+msgid "No"
+msgstr "خیر"
+
+#: include/class-setting.php:105
+msgctxt "wc-setting"
+msgid "Design Setting"
+msgstr "تنظیمات طراحی"
+
+#: include/class-setting.php:110
+msgctxt "wc-setting"
+msgid "Current Delivery Status"
+msgstr "وضعیت فعلی مرسوله"
+
+#: include/class-setting.php:114
+msgctxt "wc-setting"
+msgid "Show as Plain Text"
+msgstr "نمایش بصورت متن خالی"
+
+#: include/class-setting.php:115
+msgctxt "wc-setting"
+msgid "Show as Plain Text with Description"
+msgstr "نمایش بصورت متن با توضیحات"
+
+#: include/class-setting.php:116
+msgctxt "wc-setting"
+msgid "Show as Horizontal Progress-bar"
+msgstr "نمایش بصورت یک میله ی افقی"
+
+#: include/class-setting.php:117
+msgctxt "wc-setting"
+msgid "Show as Horizontal Seprated-bars"
+msgstr "نمایش بصورت چند میله ی افقی"
+
+#: include/class-setting.php:118
+msgctxt "wc-setting"
+msgid "Show as Horizontal Images"
+msgstr "نمایش بصورت عکس های افقی"
+
+#: include/class-setting.php:119
+msgctxt "wc-setting"
+msgid "Don't show at all"
+msgstr "عدم نمایش در سفارشات"
+
+#: include/class-setting.php:124 include/class-setting.php:148
+msgctxt "wc-setting"
+msgid "Estimated Delivery Date"
+msgstr "تاریخ تقریبی تحویل"
+
+#: include/class-setting.php:125 include/class-setting.php:131
+msgctxt "wc-setting"
+msgid "Check to show or leave unchecked to hide"
+msgstr "برای نمایش این گزینه را بزنید و برای مخفی سازی، تیک را بردارید"
+
+#: include/class-setting.php:130
+msgctxt "wc-setting"
+msgid "Show Labels"
+msgstr "نمایش عناوین"
+
+#: include/class-setting.php:143
+msgctxt "wc-setting"
+msgid "Internationalization Setting"
+msgstr "تنظیمات ترجمه پذیری"
+
+#: include/class-setting.php:149
+msgctxt "wc-setting"
+msgid "Customize 'Estimated Delivery Date' label"
+msgstr "شخصی سازی متن \"تاریخ تقریبی تحویل\""
+
+#: include/class-setting.php:151 pepro-wc-delivery-stages.php:138
+#: pepro-wc-delivery-stages.php:140
+msgid "Estimated Delivery Date: "
+msgstr "تاریخ تقریبی تحویل: "
+
+#: include/class-setting.php:155
+msgctxt "wc-setting"
+msgid "Current Delivery State"
+msgstr "وضعیت فعلی مرسوله"
+
+#: include/class-setting.php:156
+msgctxt "wc-setting"
+msgid "Customize 'Current Delivery State' label"
+msgstr "شخصی سازی متن \"وضعیت فعلی مرسوله\""
+
+#: include/class-setting.php:158 pepro-wc-delivery-stages.php:134
+#: pepro-wc-delivery-stages.php:136
+msgid "Current Delivery State: "
+msgstr "وضعیت فعلی مرسوله: "
+
+#: include/class-setting.php:259
+msgid "The following delivery stages apply to orders with shipping."
+msgstr "مراحل زیر برای ارسال مرسولات سفارشات مورد استفاده قرار میگیرند."
+
+#: include/class-setting.php:265
+msgid "Title"
+msgstr "عنوان"
+
+#: include/class-setting.php:266
+msgid "Enabled"
+msgstr "فعال"
+
+#: include/class-setting.php:267
+msgid "Description"
+msgstr "توضیحات"
+
+#: include/class-setting.php:273
+msgid "Add Delivery Stage"
+msgstr "افزودن وضعیت تحویل"
+
+#: include/class-setting.php:274
+msgid "Reset All Delivery Stages?"
+msgstr "ریست مراحل تحویل مرسولات؟"
+
+#: include/class-setting.php:274
+msgid ""
+"Are you sure you want to reset all entries?<br>THIS WILL REMOVE ALL ENTRIES "
+"AND CANNOT BE UNDONE."
+msgstr ""
+"آیا مطمئن هستید میخواهید مراحل تحویل مرسولات را ریست کنید؟<br> این عمل تمامی "
+"مراحل فعلی را حذف میکند و قابل بازگردانی نیست."
+
+#: include/class-setting.php:274
+msgid "Reset to Default Delivery Stages"
+msgstr "ریست به پیشفرض"
+
+#: include/class-setting.php:275
+msgid "Delete All Delivery Stages?"
+msgstr "حذف همه مراحل تحویل مرسوله؟"
+
+#: include/class-setting.php:275
+msgid "Are you sure you want to delete all entries?<br>THIS CANNOT BE UNDONE."
+msgstr ""
+"آیا مطمئن هستید میخواهید تمامی مراحل تحویل مرسولات را حذف کنید؟<br>این عمل "
+"قابل بازگردانی نیست."
+
+#: include/class-setting.php:275
+msgid "Delete all Delivery Satages"
+msgstr "حذف همه مراحل تحویل"
+
+#: include/class-setting.php:287 include/class-setting.php:343
+msgid "Save changes"
+msgstr "ذخیره تغییرات"
+
+#: include/class-setting.php:291
+msgid ""
+"You can add multiple delivery stages and set for orders so customers could "
+"check their delivery status."
+msgstr ""
+"شما میتوانید چندین مرحله برای تحویل مرسولات خود ایجاد کنید و به کاربر اجازه "
+"دهید وضعیت ارسالی مرسولات را پیگیری کند."
+
+#: include/class-setting.php:301
+msgid "Edit"
+msgstr "ويرايش"
+
+#: include/class-setting.php:301
+#, php-format
+msgid "Delete %s?"
+msgstr "حذف %s ؟"
+
+#: include/class-setting.php:301
+msgid "Are you sure you want to delete this entry?<br>THIS CANNOT BE UNDONE."
+msgstr "آیا از حذف این مورد اطمینان دارید؟ این عملیات قابل بازگردانی نیست."
+
+#: include/class-setting.php:301
+msgid "Delete"
+msgstr "حذف"
+
+#. translators: %s: shipping method title
+#: include/class-setting.php:325
+#, php-format
+msgid "%s Settings"
+msgstr "تنظیمات %s"
+
+#: include/class-setting.php:331
+msgid "Close modal panel"
+msgstr "بستن"
+
+#: include/class-setting.php:342
+msgid "Cancel"
+msgstr "لغو"
+
+#: include/class-setting.php:356
+msgid "Stage Name"
+msgstr "نام مرحله"
+
+#: include/class-setting.php:356
+msgid "Customers will see this as caption of current stage."
+msgstr "مشتری این نام را به عنوان مرحله فعلی میشناسد."
+
+#: include/class-setting.php:360 include/class-setting.php:370
+msgid "Enter Stage Name"
+msgstr "نام مرحله را وارد کنید"
+
+#: include/class-setting.php:366
+msgid "Stage Description"
+msgstr "توضیحات مرحله"
+
+#: include/class-setting.php:366
+msgid "Customers will see this as description of current stage."
+msgstr "مشتری این توضیحات را برای مرحله فعلی میبیند."
+
+#: include/class-setting.php:376
+msgid "Stage Icon"
+msgstr "آیکون مرحله"
+
+#: include/class-setting.php:376
+msgid "Customers will see this as icon of current stage."
+msgstr "مشتری مرحله فعلی را با این آیکون میشناسد."
+
+#: include/class-setting.php:380
+msgid "Enter Stage Icon URL"
+msgstr "آدرس لینک آیکون را وارد کنید"
+
+#: include/class-setting.php:386
+msgid "Sample Icons"
+msgstr "آیکون های پیشفرض"
+
+#: include/class-setting.php:386
+msgid "Click on Icon to set as current stage icon."
+msgstr "برای ست کردن روی آیکون کلیک کنید."
+
+#. Plugin Name of the plugin/theme
+#: pepro-wc-delivery-stages.php:80
+msgid "Pepro Delivery Stages for WooCommerce"
+msgstr "مراحل تحویل مرسولات ووکامرس از پپرو"
+
+#: pepro-wc-delivery-stages.php:81
+msgid "WC Delivery Stages"
+msgstr "مراحل تحویل مرسولات"
+
+#: pepro-wc-delivery-stages.php:82
+#, php-format
+msgid "%2$s ver. %1$s"
+msgstr "%2$s نسخه %1$s"
+
+#: pepro-wc-delivery-stages.php:279
+msgid "Manage Delivery Stages Details"
+msgstr "مدیریت مراحل تحویل مرسولات"
+
+#: pepro-wc-delivery-stages.php:287
+msgid "Delivery Details"
+msgstr "توضیحات"
+
+#: pepro-wc-delivery-stages.php:290
+msgid "Current Delivery Stage"
+msgstr "وضعیت فعلی مرسوله"
+
+#: pepro-wc-delivery-stages.php:294
+msgid "Estimated Delivery Date"
+msgstr "تاریخ تقریبی تحویل"
+
+#: pepro-wc-delivery-stages.php:295
+msgid "Enter Estimated Delivery Date"
+msgstr "تاریخ تقریبی تحویل را وارد کنید"
+
+#: pepro-wc-delivery-stages.php:393
+msgid "Settings Successfully Saved."
+msgstr "تنظیمات با موفقیت ذخیره شد."
+
+#: pepro-wc-delivery-stages.php:396
+msgid "Incorrect Data Supplied."
+msgstr "داده ی اشتباه وارد شده است."
+
+#: pepro-wc-delivery-stages.php:417
+#, php-format
+msgctxt "required-plugin"
+msgid "%1$s needs %2$s in order to function"
+msgstr ""
+"افزونه %1$s برای عملکرد صحیح به افزونه %2$s نیاز دارد. لطفا نسبت به نصب و "
+"فعالسازی اقدام کنید"
+
+#: pepro-wc-delivery-stages.php:419
+msgctxt "required-plugin"
+msgid "WooCommerce"
+msgstr "ووکامرس"
+
+#: pepro-wc-delivery-stages.php:462
+msgctxt "default-stages"
+msgid "Processing your Order"
+msgstr "در حال پردازش"
+
+#: pepro-wc-delivery-stages.php:463
+msgctxt "default-stages"
+msgid "Your Order is being prepared"
+msgstr "سفارش شما در حال آماده سازی است"
+
+#: pepro-wc-delivery-stages.php:469
+msgctxt "default-stages"
+msgid "Packing your Order"
+msgstr "بسته بندی"
+
+#: pepro-wc-delivery-stages.php:470
+msgctxt "default-stages"
+msgid "Your Order is being packed"
+msgstr "سفارش شما در حال بسته بندی است"
+
+#: pepro-wc-delivery-stages.php:476
+msgctxt "default-stages"
+msgid "Delivered to Post"
+msgstr "ارسال به مامور پستی"
+
+#: pepro-wc-delivery-stages.php:477
+msgctxt "default-stages"
+msgid "Your Order has been sent to post office"
+msgstr "سفارش شما به مامور پست ارسال شد"
+
+#: pepro-wc-delivery-stages.php:483
+msgctxt "default-stages"
+msgid "Received"
+msgstr "دریافت شد"
+
+#: pepro-wc-delivery-stages.php:484
+msgctxt "default-stages"
+msgid "You've successfully received your order"
+msgstr "سفارش با موفقیت در مقصد دریافت شد"
+
+#: pepro-wc-delivery-stages.php:502 pepro-wc-delivery-stages.php:503
+msgid "Support"
+msgstr "پشتیبانی این محصول"
+
+#: pepro-wc-delivery-stages.php:524
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: pepro-wc-delivery-stages.php:587
+#, php-format
+msgctxt "footer-copyright"
+msgid "Thanks for using %s products"
+msgstr "بابت استفاده از محصولات %s سپاسگزاریم"
+
+#: pepro-wc-delivery-stages.php:587
+msgid "Pepro Dev"
+msgstr "تیم برنامه ‏نویسی پپرو"
+
+#: pepro-wc-delivery-stages.php:588
+#, php-format
+msgctxt "footer-copyright"
+msgid "%s — Version %s"
+msgstr "%s — نسخه %s"
+
+#: pepro-wc-delivery-stages.php:600
+msgid "Delivery Stages"
+msgstr "مراحل تحویل"
+
+#: pepro-wc-delivery-stages.php:628
+msgctxt "js-string"
+msgid "Submit"
+msgstr "ثبت"
+
+#: pepro-wc-delivery-stages.php:629
+msgctxt "js-string"
+msgid "Today"
+msgstr "امروز"
+
+#: pepro-wc-delivery-stages.php:631
+msgctxt "wc-setting-js"
+msgid "Canceled"
+msgstr "لغو شد"
+
+#: pepro-wc-delivery-stages.php:632
+msgctxt "wc-setting-js"
+msgid "Confirm"
+msgstr "تایید کنید"
+
+#: pepro-wc-delivery-stages.php:633
+msgctxt "wc-setting-js"
+msgid "Success"
+msgstr "عملیات موفق"
+
+#: pepro-wc-delivery-stages.php:634
+msgctxt "wc-setting-js"
+msgid "Submit"
+msgstr "ثبت"
+
+#: pepro-wc-delivery-stages.php:635
+msgctxt "wc-setting-js"
+msgid "Okay"
+msgstr "باشه"
+
+#: pepro-wc-delivery-stages.php:639
+msgctxt "wc-setting-js"
+msgid "Send to all"
+msgstr "ارسال به لیست"
+
+#: pepro-wc-delivery-stages.php:641
+msgctxt "wc-setting-js"
+msgid "Delete Submition"
+msgstr "حذف داده ثبت شده"
+
+#: pepro-wc-delivery-stages.php:642
+#, php-format
+msgctxt "wc-setting-js"
+msgid ""
+"Are you sure you want to delete submition ID %s ? This cannot be undone."
+msgstr ""
+"آیا از حذف داده ثبتی به شماره %s اطمینان دارید؟ این عملیات قابل بازگردانی "
+"نیست."
+
+#: pepro-wc-delivery-stages.php:643
+msgctxt "wc-setting-js"
+msgid ""
+"Are you sure you want to clear all data from database? This cannot be undone."
+msgstr ""
+"آیا مطمئن هستید میخواهید تمامی رکورد های دیتابیس و تاریخچه داده های ذخیره "
+"شده را حذف کنید؟ این عملیات قابل بازگشت نیست."
+
+#: pepro-wc-delivery-stages.php:644
+msgctxt "wc-setting-js"
+msgid ""
+"Are you sure you want to clear all Current Contact form data from database? "
+"This cannot be undone."
+msgstr ""
+"آیا مطمئن هستید میخواهید تمامی رکورد های دیتابیس مرتبط با فرم تماس فعلی و "
+"تاریخچه داده های ذخیره شده را حذف کنید؟ این عملیات قابل بازگردانی نیست."
+
+#: pepro-wc-delivery-stages.php:645
+msgctxt "wc-setting-js"
+msgid "Clear Database"
+msgstr "پاکسازی دیتابیس"
+
+#: pepro-wc-delivery-stages.php:646
+#, php-format
+msgctxt "wc-setting-js"
+msgid "Product WC Delivery Stages Data Exported via %s"
+msgstr "خروجی مراحل تحویل ووکامرس از %s"
+
+#: pepro-wc-delivery-stages.php:647
+msgctxt "wc-setting-js"
+msgid "Product WC Delivery Stages Export"
+msgstr "خروجی مراحل تحویل ووکامرس"
+
+#: pepro-wc-delivery-stages.php:648
+#, php-format
+msgctxt "wc-setting-js"
+msgid "Exported at %s @ %s"
+msgstr "استخراج شده در %s @ %s"
+
+#: pepro-wc-delivery-stages.php:650
+#, php-format
+msgctxt "wc-setting-js"
+msgid ""
+"Exported via %s — Export Date: %s @ %s — Developed by Pepro Dev. Group "
+"( https://pepro.dev/ )"
+msgstr ""
+"استخراج توسط %s — تاریخ: %s @ %s — توسعه یافته توسط تیم توسعه نرم‌افزاری پپرو "
+"( https://pepro.dev/ )"
+
+#: pepro-wc-delivery-stages.php:652
+msgctxt "data-table"
+msgid "No data available in table"
+msgstr "هیچ داده ای در جدول وجود ندارد"
+
+#: pepro-wc-delivery-stages.php:653
+msgctxt "data-table"
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr "نمایش _START_ تا _END_ از _TOTAL_ رکورد"
+
+#: pepro-wc-delivery-stages.php:654
+msgctxt "data-table"
+msgid "Showing 0 to 0 of 0 entries"
+msgstr "نمایش 0 تا 0 از 0 رکورد"
+
+#: pepro-wc-delivery-stages.php:655
+msgctxt "data-table"
+msgid "(filtered from _MAX_ total entries)"
+msgstr "(فیلتر شده از _MAX_ رکورد)"
+
+#: pepro-wc-delivery-stages.php:656
+msgctxt "data-table"
+msgid "Show _MENU_ entries"
+msgstr "نمایش _MENU_ رکورد"
+
+#: pepro-wc-delivery-stages.php:657
+msgctxt "data-table"
+msgid "Loading..."
+msgstr "در حال بارگزاری ..."
+
+#: pepro-wc-delivery-stages.php:658
+msgctxt "data-table"
+msgid "Processing..."
+msgstr "در حال پردازش ..."
+
+#: pepro-wc-delivery-stages.php:659
+msgctxt "data-table"
+msgid "Search:"
+msgstr "جستجو در موارد نمایش داده شده:"
+
+#: pepro-wc-delivery-stages.php:660
+msgctxt "data-table"
+msgid "No matching records found"
+msgstr "رکوردی با این مشخصات پیدا نشد"
+
+#: pepro-wc-delivery-stages.php:661
+msgctxt "data-table"
+msgid "First"
+msgstr "ابتدا"
+
+#: pepro-wc-delivery-stages.php:662
+msgctxt "data-table"
+msgid "Last"
+msgstr "انتها"
+
+#: pepro-wc-delivery-stages.php:663
+msgctxt "data-table"
+msgid "Next"
+msgstr "بعدی"
+
+#: pepro-wc-delivery-stages.php:664
+msgctxt "data-table"
+msgid "Previous"
+msgstr "قبلی"
+
+#: pepro-wc-delivery-stages.php:665
+msgctxt "data-table"
+msgid ": activate to sort column ascending"
+msgstr ": فعال سازی نمایش به صورت صعودی"
+
+#: pepro-wc-delivery-stages.php:666
+msgctxt "data-table"
+msgid ": activate to sort column descending"
+msgstr ": فعال سازی نمایش به صورت نزولی"
+
+#: pepro-wc-delivery-stages.php:667
+msgctxt "data-table"
+msgid "Copy to clipboard"
+msgstr "کپی به کلیپ‌بورد"
+
+#: pepro-wc-delivery-stages.php:668
+msgctxt "data-table"
+msgid "Print"
+msgstr "پرینت"
+
+#: pepro-wc-delivery-stages.php:669
+msgctxt "data-table"
+msgid "Column visibility"
+msgstr "نمایش ستون"
+
+#: pepro-wc-delivery-stages.php:670
+msgctxt "data-table"
+msgid "Export CSV"
+msgstr "استخراج CSV"
+
+#: pepro-wc-delivery-stages.php:671
+msgctxt "data-table"
+msgid "Export Excel"
+msgstr "استخراج اکسل"
+
+#: pepro-wc-delivery-stages.php:672
+msgctxt "data-table"
+msgid "Export PDF"
+msgstr "استخراج PDF"
+
+#: pepro-wc-delivery-stages.php:673
+msgctxt "data-table"
+msgid "No State Found"
+msgstr "استان یافت نشد"
+
+#: pepro-wc-delivery-stages.php:674
+msgctxt "data-table"
+msgid "Add New Entry"
+msgstr "اضافه کردن جدید"
+
+#. Plugin URI of the plugin/theme
+msgid "https://pepro.dev/wc-delivery-stages"
+msgstr "https://pepro.dev/wc-delivery-stages"
+
+#. Description of the plugin/theme
+msgid "Add multiple and customizable delivery stages for WooCommerce orders"
+msgstr ""
+"افزودن مراحل تحویل مرسولات و نمایش اطلاعات در صفحه سفارشات، با قابلیت سفارشی "
+"سازی و قابل توسعه برای برنامه‌نویسان"
+
+#. Author of the plugin/theme
+msgid "Pepro Dev. Group"
+msgstr "تیم برنامه ‏نویسی پپرو"
+
+#. Author URI of the plugin/theme
+msgid "https://pepro.dev/"
+msgstr "https://pepro.dev/"
