@@ -12,10 +12,10 @@ Plugin URI: https://pepro.dev/wc-delivery-stages
 Version: 1.1.0
 Stable tag: 1.1.0
 Requires at least: 5.0
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.6
 WC requires at least: 4.0
-WC tested up to: 4.8.0
+WC tested up to: 5.0.0
 Text Domain: pepro-delivery-stages-for-woocommerce
 Domain Path: /languages
 Copyright: (c) 2020 Pepro Dev. Group, All rights reserved.
