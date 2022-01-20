@@ -1,4 +1,4 @@
-=== Pepro Delivery Stages for WooCommerce ===
+=== PeproDev Delivery Stages for WooCommerce ===
 Contributors: peprodev,amirhosseinhpv
 Donate link: https://pepro.dev/donate
 Tags: functionality,woocommmerce,shipping,delivery,tracking,order tracking,shipping tracking,delivery tracking,delivery status

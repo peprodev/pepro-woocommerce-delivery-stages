@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Pepro Delivery Stages for WooCommerce
+Plugin Name: PeproDev Delivery Stages for WooCommerce
 Description: Add multiple and customizable delivery stages for WooCommerce orders
 Contributors: amirhosseinhpv,peprodev
 Tags: functionality, woocommmerce, shipping, delivery, tracking, order tracking, shipping tracking, delivery tracking, delivery status
