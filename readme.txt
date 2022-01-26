@@ -3,7 +3,7 @@ Contributors: peprodev,amirhosseinhpv
 Donate link: https://pepro.dev/donate
 Tags: functionality,woocommmerce,shipping,delivery,tracking,order tracking,shipping tracking,delivery tracking,delivery status
 Requires at least: 5.0
-Tested up to: 5.7
+Tested up to: 5.9
 Stable tag: 1.1.0
 Requires PHP: 5.6
 WC requires at least: 4.0
